@@ -5,6 +5,7 @@ import { z } from "zod";
 import { BiShow, BiHide } from "react-icons/bi";
 import SigninImage from "../assets/Login.png";
 import { useSigninMutation } from "../api/hooks/index";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   phone: z.string().min(10, { message: "Please enter Phone" }),
@@ -118,9 +119,9 @@ const SignIn = () => {
           </button>
         </form>
         <div className="mt-6 text-lime-600 text-center">
-          <a href="#" className="underline">
+          <Link to="/sigin" className="underline">
             Sign up Here
-          </a>
+          </Link>
         </div>
       </div>
     </div>
