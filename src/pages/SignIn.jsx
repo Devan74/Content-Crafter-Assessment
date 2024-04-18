@@ -119,7 +119,7 @@ const SignIn = () => {
           </button>
         </form>
         <div className="mt-6 text-lime-600 text-center">
-          <Link to="/sigin" className="underline">
+          <Link to="/signup" className="underline">
             Sign up Here
           </Link>
         </div>
