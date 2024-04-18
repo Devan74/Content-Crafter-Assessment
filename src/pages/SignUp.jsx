@@ -7,7 +7,7 @@ import GoogleLogo from "../assets/Google_logo.png";
 import { useSignupMutation } from "../api/hooks/index";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Please enter Name" }),
@@ -149,9 +149,9 @@ const SignUp = () => {
         <div className="mt-6 text-center">
           <p className="text-gray-600 text-sm">
             Already have an account?{" "}
-            <a href="#" className="text-lime-600 underline">
+            <Link to="/signin" className="text-lime-600 underline">
               Login
-            </a>
+            </Link>
           </p>
           <div className="flex flex-col space-y-2  mt-5">
             <div className="flex flex-row items-center justify-center cursor-pointer gap-2">
